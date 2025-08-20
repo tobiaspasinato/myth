@@ -1,3 +1,5 @@
+
+
 .navbar{
     width: 100%;
     display: flex;
@@ -51,13 +53,19 @@
     margin: 20px;
 }
 
+.toggle-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .search-box {
     display: flex;
     align-items: center;
     background: #dbdbdb;
     padding: 10px 20px;
     border-radius: 50px;
-    margin-right: 20px;
+    margin-right: 0;
 }
 
 .search-button {
