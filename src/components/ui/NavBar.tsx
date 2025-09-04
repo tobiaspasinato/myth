@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
+import icon from '../../assets/icon.svg';
 import searchIcon from '../../assets/search-icon.svg';
 import darkModeIcon from '../../assets/dark-mode.svg';
 import lightModeIcon from '../../assets/light-mode.svg';
@@ -20,7 +21,7 @@ export default function NavBar() {
 
     return (
         <div className='navbar'>
-            {/* <img src={logo} alt="Page Koi Logo" className='logo'/> */}
+            <img src={icon} alt="Myth" className='logo'/>
             <h2>Myth</h2>
             <ul>
                 <li><Link to="/">Home</Link></li>
