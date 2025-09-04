@@ -25,6 +25,7 @@ export default function NavBar() {
             <h2>Connect</h2>
             <ul>
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/projects">Projects</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
             </ul>
@@ -37,9 +38,15 @@ export default function NavBar() {
             {/* <button type="button" className='toggle-button' onClick={toggleColorMode}>
                 <img src={colorMode === 'light' ? darkModeIcon : lightModeIcon} alt="Toggle Color Mode Icon" className='toggle-icon'/>
             </button> */}
-            <img src={iconinstagram} alt="Instagram" className='logoSocial'/>
-            <img src={iconlinkedin} alt="Linkedin" className='logoSocial'/>
-            <img src={icongithub} alt="Github" className='logoSocial'/>
+            <a href="https://www.instagram.com/tobiiaspasinato/" target="_blank" rel="noopener noreferrer">
+                <img src={iconinstagram} alt="Instagram" className='logoSocial'/>
+            </a>
+            <a href="https://www.linkedin.com/in/tob%C3%ADas-pasinato-4252232b8/" target="_blank" rel="noopener noreferrer">
+                <img src={iconlinkedin} alt="Linkedin" className='logoSocial'/>
+            </a>
+            <a href="https://github.com/tobiaspasinato" target="_blank" rel="noopener noreferrer">
+                <img src={icongithub} alt="Github" className='logoSocial'/>
+            </a>
         </div>
     )
 }
