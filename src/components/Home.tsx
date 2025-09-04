@@ -1,8 +1,6 @@
-import './Home.css';
-
 function Home() {
   return (
-    <div className="home">Home</div>
+    <div className="home" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>Home</div>
   )
 }
 
