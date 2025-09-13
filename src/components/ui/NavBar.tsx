@@ -28,7 +28,6 @@ export default function NavBar() {
             <ul>
                 <li><Link to="/" className={location.pathname === "/" ? "active-link" : ""}>Projects</Link></li>
                 <li><Link to="/about" className={location.pathname === "/about" ? "active-link" : ""}>About</Link></li>
-                <li><Link to="/contact" className={location.pathname === "/contact" ? "active-link" : ""}>Contact</Link></li>
             </ul>
             {/* <div className='search-box'>
                 <input type="text" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
