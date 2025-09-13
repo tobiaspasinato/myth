@@ -1,12 +1,14 @@
 // import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
 import icon from '../../assets/icon.svg';
 import icongithub from '../../assets/icon-github.svg';
 import iconlinkedin from '../../assets/icon-linkedin.svg';
 import iconinstagram from '../../assets/icon-insta.svg';
+import iconGmail from '../../assets/gmail.svg';
 
 export default function NavBar() {
+    const location = useLocation();
 
     // const [searchTerm, setSearchTerm] = useState('');
     // const [colorMode, setColorMode] = useState('light');
@@ -24,10 +26,9 @@ export default function NavBar() {
             <img src={icon} alt="Myth" className='logo'/>
             <h2>Connect</h2>
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/" className={location.pathname === "/" ? "active-link" : ""}>Projects</Link></li>
+                <li><Link to="/about" className={location.pathname === "/about" ? "active-link" : ""}>About</Link></li>
+                <li><Link to="/contact" className={location.pathname === "/contact" ? "active-link" : ""}>Contact</Link></li>
             </ul>
             {/* <div className='search-box'>
                 <input type="text" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
@@ -38,6 +39,9 @@ export default function NavBar() {
             {/* <button type="button" className='toggle-button' onClick={toggleColorMode}>
                 <img src={colorMode === 'light' ? darkModeIcon : lightModeIcon} alt="Toggle Color Mode Icon" className='toggle-icon'/>
             </button> */}
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tobiasmarpasinato@gmail.com" target="_blank" rel="noopener noreferrer">
+                <img src={iconGmail} alt="Gmail" className='logoSocial'/>
+            </a>
             <a href="https://www.instagram.com/tobiiaspasinato/" target="_blank" rel="noopener noreferrer">
                 <img src={iconinstagram} alt="Instagram" className='logoSocial'/>
             </a>
